@@ -52,6 +52,19 @@ public class CellPhoneApplication {
         String yourNorm = yourPhone.getPhoneNumber().replaceAll("[^0-9]", "");
         String thirdNorm = thirdPhone.getPhoneNumber().replaceAll("[^0-9]", "");
 
+        if (normalizedInput.equals(myNorm)) {
+            yourPhone.dial(myPhone);
+        }
+        else if (normalizedInput.equals(yourNorm)) {
+            myPhone.dial(yourPhone);
+        }
+        else if (normalizedInput.equals(thirdNorm)) {
+            myPhone.dial(thirdPhone);
+        }
+        else {
+            System.out.println("No phone with that number exists in the system.");
+        }
+
         keyboard.close();
     }
 
