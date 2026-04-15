@@ -11,5 +11,11 @@ public class CellPhoneApplication {
         myPhone.setPhoneNumber("(420) 069-6767");
         myPhone.setOwner("Taryn Williams");
 
+        System.out.println("Serial #: " + myPhone.getSerialNumber());
+        System.out.println("Model: "    + myPhone.getModel());
+        System.out.println("Carrier: "  + myPhone.getCarrier());
+        System.out.println("Phone #: "  + myPhone.getPhoneNumber());
+        System.out.println("Owner: "    + myPhone.getOwner());
+
     }
 }
