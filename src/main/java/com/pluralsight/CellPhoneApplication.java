@@ -34,6 +34,19 @@ public class CellPhoneApplication {
 
         System.out.println("Enter a phone number to call:");
         String numberToCall = keyboard.nextLine();
+        if (numberToCall.equals(myPhone.getPhoneNumber())) {
+            yourPhone.dial(myPhone);
+        }
+        else if (numberToCall.equals(yourPhone.getPhoneNumber())) {
+            myPhone.dial(yourPhone);
+        }
+        else if (numberToCall.equals(thirdPhone.getPhoneNumber())) {
+            myPhone.dial(thirdPhone);
+        }
+        else {
+            System.out.println("No phone with that number exists in the system.");
+        }
+        keyboard.close();
     }
 
     public static void display(CellPhone phone) {
