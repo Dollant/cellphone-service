@@ -25,5 +25,8 @@ public class CellPhoneApplication {
 
         display(myPhone);
         display(yourPhone);
+        myPhone.dial(yourPhone.getPhoneNumber());
+        yourPhone.dial(myPhone.getPhoneNumber());
     }
+
 }
