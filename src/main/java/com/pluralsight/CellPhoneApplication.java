@@ -17,12 +17,6 @@ public class CellPhoneApplication {
         yourPhone.setPhoneNumber("(666) 777-6767");
         yourPhone.setOwner("Fia Reaves");
 
-        System.out.println("Serial #: " + myPhone.getSerialNumber());
-        System.out.println("Model: "    + myPhone.getModel());
-        System.out.println("Carrier: "  + myPhone.getCarrier());
-        System.out.println("Phone #: "  + myPhone.getPhoneNumber());
-        System.out.println("Owner: "    + myPhone.getOwner());
-
         display(myPhone);
         display(yourPhone);
 

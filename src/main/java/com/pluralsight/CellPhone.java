@@ -40,4 +40,7 @@ public class CellPhone {
         System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + phoneNumber);
     }
 
+    public void dial(CellPhone phone) {
+        System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + getPhoneNumber());
+    }
 }
