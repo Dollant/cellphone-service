@@ -32,8 +32,16 @@ public class CellPhoneApplication {
         display(thirdPhone);
 
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("\nEnter a phone number to call:");
-        String numberToCall = keyboard.nextLine();
+        System.out.println("\nEnter a phone number to call: ");
+
+        while (true) {
+            System.out.println("\nEnter a phone number to call (or type EXIT to quit): ");
+            String numberToCall = keyboard.nextLine();
+
+            if (numberToCall.equalsIgnoreCase("exit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
 
         if (numberToCall == null || numberToCall.trim().isEmpty()) {
             System.out.println("Error: You must enter a phone number.");
@@ -54,20 +62,16 @@ public class CellPhoneApplication {
 
         if (normalizedInput.equals(myNorm)) {
             yourPhone.dial(myPhone);
-        }
-        else if (normalizedInput.equals(yourNorm)) {
+        } else if (normalizedInput.equals(yourNorm)) {
             myPhone.dial(yourPhone);
-        }
-        else if (normalizedInput.equals(thirdNorm)) {
+        } else if (normalizedInput.equals(thirdNorm)) {
             myPhone.dial(thirdPhone);
-        }
-        else {
+        } else {
             System.out.println("No phone with that number exists in the system.");
         }
-
-        keyboard.close();
     }
-
+        keyboard.close();
+}
     public static void display(CellPhone phone) {
         System.out.println("\n°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･────୨ৎ────°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
         System.out.println("Owner: " + phone.getOwner());
