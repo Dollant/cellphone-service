@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CellPhoneApplication {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
 
         CellPhone myPhone = new CellPhone();
         myPhone.setSerialNumber(4000004);
@@ -32,20 +31,22 @@ public class CellPhoneApplication {
         display(yourPhone);
         display(thirdPhone);
 
-        System.out.println("Enter a phone number to call:");
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("\nEnter a phone number to call:");
         String numberToCall = keyboard.nextLine();
-        if (numberToCall.equals(myPhone.getPhoneNumber())) {
-            yourPhone.dial(myPhone);
+
+        if (numberToCall == null || numberToCall.trim().isEmpty()) {
+            System.out.println("Error: You must enter a phone number.");
+            return;
         }
-        else if (numberToCall.equals(yourPhone.getPhoneNumber())) {
-            myPhone.dial(yourPhone);
+
+        numberToCall = numberToCall.trim();
+
+        if (!numberToCall.matches(".*\\d.*")) {
+            System.out.println("Error: Phone number must contain digits.");
+            return;
         }
-        else if (numberToCall.equals(thirdPhone.getPhoneNumber())) {
-            myPhone.dial(thirdPhone);
-        }
-        else {
-            System.out.println("No phone with that number exists in the system.");
-        }
+
         keyboard.close();
     }
 
