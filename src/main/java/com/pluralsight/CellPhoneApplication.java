@@ -47,6 +47,8 @@ public class CellPhoneApplication {
             return;
         }
 
+        String normalizedInput = numberToCall.replaceAll("[^0-9]", "");
+
         keyboard.close();
     }
 
