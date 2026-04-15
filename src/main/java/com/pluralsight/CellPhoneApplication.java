@@ -77,4 +77,12 @@ public class CellPhoneApplication {
         System.out.println("Serial #: " + phone.getSerialNumber());
         System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･────୨ৎ────°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
     }
+
+    public static String formatNumber(String digits) {
+        if (digits.length() != 10) return digits;
+        String area = digits.substring(0, 3);
+        String prefix = digits.substring(3, 6);
+        String line = digits.substring(6);
+        return "(" + area + ") " + prefix + "-" + line;
+    }
 }
