@@ -1,7 +1,10 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class CellPhoneApplication {
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
 
         CellPhone myPhone = new CellPhone();
         myPhone.setSerialNumber(4000004);
@@ -29,8 +32,8 @@ public class CellPhoneApplication {
         display(yourPhone);
         display(thirdPhone);
 
-        myPhone.dial(yourPhone.getPhoneNumber());
-        yourPhone.dial(myPhone.getPhoneNumber());
+        System.out.println("Enter a phone number to call:");
+        String numberToCall = keyboard.nextLine();
     }
 
     public static void display(CellPhone phone) {
