@@ -23,7 +23,7 @@ public class CellPhoneApplication {
         System.out.println("Phone #: "  + myPhone.getPhoneNumber());
         System.out.println("Owner: "    + myPhone.getOwner());
 
-
-
+        display(myPhone);
+        display(yourPhone);
     }
 }
