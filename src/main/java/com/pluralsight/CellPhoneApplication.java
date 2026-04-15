@@ -17,8 +17,17 @@ public class CellPhoneApplication {
         yourPhone.setPhoneNumber("(666) 777-6767");
         yourPhone.setOwner("Fia Reaves");
 
+        CellPhone thirdPhone = new CellPhone(
+                6000006,
+                "Google Pixel 12 Pro",
+                "AT&T",
+                "(333) 444-5555",
+                "Dolly Ari"
+        );
+
         display(myPhone);
         display(yourPhone);
+        display(thirdPhone);
 
         myPhone.dial(yourPhone.getPhoneNumber());
         yourPhone.dial(myPhone.getPhoneNumber());
