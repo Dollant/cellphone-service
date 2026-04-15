@@ -37,10 +37,14 @@ public class CellPhone {
     public void setOwner (String owner) { this.owner = owner; }
 
     public void dial(String phoneNumber) {
-        System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + phoneNumber);
+        String digits = phoneNumber.replaceAll("[^0-9]", "");
+        String formatted = CellPhoneApplication.formatNumber(digits);
+        System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + formatted);
     }
 
     public void dial(CellPhone phone) {
-        System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + getPhoneNumber());
+        String digits = phoneNumber.replaceAll("[^0-9]", "");
+        String formatted = CellPhoneApplication.formatNumber(digits);
+        System.out.println(owner + "'s phone is calling (˶˃ ᵕ ˂˶) ♡ " + formatted);
     }
 }
