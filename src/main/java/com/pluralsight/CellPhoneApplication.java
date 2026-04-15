@@ -31,7 +31,7 @@ public class CellPhoneApplication {
     }
 
     public static void display(CellPhone phone) {
-        System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･────୨ৎ────°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+        System.out.println("\n°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･────୨ৎ────°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
         System.out.println("Owner: " + phone.getOwner());
         System.out.println("Model: " + phone.getModel());
         System.out.println("Carrier: " + phone.getCarrier());
