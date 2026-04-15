@@ -48,6 +48,9 @@ public class CellPhoneApplication {
         }
 
         String normalizedInput = numberToCall.replaceAll("[^0-9]", "");
+        String myNorm = myPhone.getPhoneNumber().replaceAll("[^0-9]", "");
+        String yourNorm = yourPhone.getPhoneNumber().replaceAll("[^0-9]", "");
+        String thirdNorm = thirdPhone.getPhoneNumber().replaceAll("[^0-9]", "");
 
         keyboard.close();
     }
